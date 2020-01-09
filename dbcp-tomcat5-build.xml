@@ -1,4 +1,4 @@
-<!-- $Id: dbcp-tomcat5-build.xml,v 1.1 2007/04/26 00:45:37 mwringe Exp $ -->
+<!-- $Id: build.xml,v 1.25 2004/05/20 16:30:30 dirkv Exp $ -->
 <project name="commons-dbcp-tomcat5" default="build" basedir=".">
 
    <property name="tomcat-dbcp.home" value="dbcp-tomcat5"/>

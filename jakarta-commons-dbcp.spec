@@ -34,7 +34,7 @@
 
 Name:           jakarta-commons-dbcp
 Version:        1.2.1
-Release:        13.8%{?dist}
+Release:        13.9%{?dist}
 Epoch:          0
 Summary:        Jakarta Commons DataBase Pooling Package
 License:        ASL 2.0
@@ -53,6 +53,7 @@ Patch3:         commons-dbcp-1.2.1-navigation_xml.patch
 Patch4:         commons-dbcp-1.2.1-project_properties.patch
 Patch5:         commons-dbcp-1.2.1-sourcever.patch
 Patch6:         commons-dbcp-1.2.1-jdk6.patch
+Patch7:         commons-dbcp-1.2.1-jdk7.patch
 
 URL:            http://jakarta.apache.org/commons/%{base_name}
 BuildRequires:  ant
@@ -127,6 +128,7 @@ cp %{SOURCE6} .
 %patch4 -b .sav
 %patch5 -b .sav
 %patch6
+%patch7 -p1
 
 %build
 export CLASSPATH=$(build-classpath jdbc-stdext xerces-j2)
@@ -209,6 +211,9 @@ update-alternatives --install %{_javadir}/hibernate_jdbc_cache.jar \
 %doc %{_javadocdir}/%{name}
 
 %changelog
+* Mon Jan 04 2016 Michael Simacek <msimacek@redhat.com> - 0:1.2.1-13.9
+- Fix compatibility with JDK 7
+
 * Thu Jan 7 2010 Alexander Kurtakov <akurtako@redhat.com> 0:1.2.1-13.8
 - Remove leftovers from previous maven builds.
 
