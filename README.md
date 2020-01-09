@@ -1,3 +1,4 @@
-# ELS - Enterprise Linux/EuroLinux Sources - jakarta-commons-dbcp 
+# ELS - Enterprise Linux/EuroLinux Sources - jakarta-commons-dbcp
+ 
 ## Usage:
-  Checkout branch or tag.
+  Checkout branch or tag. Use `make sources` to recreate  SOURCE0 archive.
